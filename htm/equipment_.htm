@@ -1,0 +1,99 @@
+<h1>Connection Guide</h1>
+
+<p>This example connection passes the data that would be normally passed along the ROV's spare pair of connections along the comms bus. The Green and Yellow APIC connectors from the zoom camera are connected to the Grey and Blue wires leading into the ROV. This frees up the spare pair to use for another accessory, which would otherwise be occupied entirely by the zoom camera.</p>
+
+<h2>Connect ROV to PAM</h2>
+
+<p>The first step of the connection is to connect a 9-pin whip to the PAM board. Begin by stripping the black tubing off the end of one of the 9-pin whips. Alcohol can be used to wash the residual glue off individual wires. Strip the tips of the individual wires to be used. The most effective way to create a permanent connection between the 9-pin whip and the PAM board is by soldering.  First, melt a small amount of solder into the contact point. A small amount of solder should then be placed on the tip of the wire to be pushed into the contact.  This is commonly called tinning.  Heat the wire and push it through the solder in the contact, and then let the solder cool. This creates a strong joint with excellent electrical conductivity. For the ROV side, the following wires should be connected to the PinOUT side of the board:</p>
+
+<p align="center"><img src= "../../pam_zoom_camera/images/camera_board.png" width="400"></p>
+
+<table align = "center">
+ <tr>
+    <th>Pin</th>
+    <th>Color</th>
+    <th>Function</th>
+    </tr>
+  <tr>
+    <td>1</td>
+    <td>Black</td>
+    <td>Video-</td>
+    </tr>
+  <tr>
+    <td>2</th>
+    <td>White</th>
+    <td>Video+</th>
+    </tr>
+  <tr>
+    <td>5</td>
+    <td>Orange</td>
+    <td>Power Common (Ground)</td>
+    </tr>
+  <tr>
+    <td>7</td>
+    <td>Grey</td>
+    <td>RS-485- OR RS-232 RX</td>
+    </tr>
+  <tr>
+    <td>8</td>
+    <td>Blue</td>
+    <td>RS-485+ OR RS-232 TX</td>
+    </tr>
+  <tr>
+    <td>9</td>
+    <td>Brown</td>
+    <td>12V DC + (30 Watts)</td>
+    </tr>
+  </table>
+
+<h2>Connect PAM to Zoom Camera</h2>
+
+<p>Prepare the second 9-pin whip as above. Connect the individuals wires as shown bellow.</p>
+
+<p align="center"><img src= "../../pam_zoom_camera/images/board_to_camera.png" width="400"></p>
+
+<table align="center">
+  <tr>
+    <th>Pin</th>
+    <th>Color</th>
+    <th>Function</th>
+    </tr>
+  <tr>
+    <td>1</td>
+    <td>Black</td>
+    <td>Video-</td>
+    </tr>
+  <tr>
+    <td>2</th>
+    <td>White</th>
+    <td>Video+</th>
+    </tr>
+  <tr>
+    <td>5</td>
+    <td>Orange</td>
+    <td>Power Common (Ground)</td>
+    </tr>
+  <tr>
+    <td>7</td>
+    <td>Green</td>
+    <td>Aux+</td>
+    </tr>
+  <tr>
+    <td>8</td>
+    <td>Yellow</td>
+    <td>Aux-</td>
+    </tr>
+  <tr>
+    <td>9</td>
+    <td>Brown</td>
+    <td>12V DC + (30 Watts)</td>
+    </tr>
+  </table>
+
+<p>Once both whips are firmly attached, they can be connected to the ROV and the Zoom Camera. Plug the whip connected to the PinOUT side to the ROV. Plug the whip connected to the PinIN side into the Zoom Camera 9-pin connector.</p>
+
+<h2>Internal</h2>
+
+<p align="center"><img src="../../pam_zoom_camera/images/camera_schematic_numbers.png" width="650"></p>
+
+<p>The above schematic shows some of the internal wiring of the zoom camera. Labeled on the right are the pins of the whip that various internal connectors are wired to on the 9-pin connector.  While this information is not required for the connection detailed in this guide, it may be useful if you would like to connect the camera in a different fashion.</p>

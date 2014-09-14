@@ -1,0 +1,26 @@
+<h1>Software Configuration</h1>
+
+<p>To begin the software configuration, connect the PAM as described in the connection section. Once the ROV is connected to the camera properly, power on the laptop and turn on the panel. The light on the PAM should blink twice as it executes the bootloader, and then emit a single blink every few seconds if it is receiving power. When the PAM begins communicating, it will emit a series of blinks every few seconds. Before we begin configuring the software, we want to test that the PAM is connected correctly.</p>
+
+<p align="center"><img src="../../pam_zoom_camera/images/cockpit_screenshot.png" width="550" height="400" name="view"></p>
+
+<ol>
+  <li><a name = "cockpit" onmouseover = "view.src=cockpit.src" onmouseout = "reset()">Open cockpit.</a></li>
+  <li><a name = "camera" onmouseover = "view.src=camera.src" onmouseout = "reset()">Find the camera instrument. If it does not appear, click the show all instruments button in the bottom pane. The default position is at the top left of the cockpit window.</a></li>
+  <li><a name = "aswitch" onmouseover = "view.src=aswitch.src" onmouseout = "reset()">Click the switch button on the camera instrument. This should switch the video feed in the main window to the zoom camera.</a></li>
+  </ol>
+
+<p>Currently the buttons on the camera instrument will not work. If the video feed test was successful, we can now configure the software to enable them.</p>
+
+<ol>
+  <li>Close VideoRay Cockpit.</li>
+  <li>Navigate to the cockpit installation directory. The default directory is <span class="folder">C:\Program Files (x86)\VideoRay\vrCockpit</span>.</li>
+  <li>Open vrDeviceConfiguration.exe.</li>
+  <li>Click the ? button at the bottom of the utility to enumerate the PAM.</li>
+  <li>If your PAM is connected correctly, you should see a listing in the left window of vrDeviceConfig. Click it.</li>
+  <li>Click the ID button at the bottom of the utility to fill in the ID field.</li>
+  <li>In the Device RS485 dropdown menu, select "Yes."</li>
+  <li>Leave all other options as they are and click the floppy disk icon at the bottom to save your settings.</li>
+  </ol>
+
+<p>This configuration should enable the software functions of VideoRay Cockpit. Restart VideoRay Cockpit and test the camera's zoom function. You should be able to zoom in and out with the camera using the up and down arrows.</p>
